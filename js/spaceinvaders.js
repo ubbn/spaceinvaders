@@ -212,6 +212,11 @@ var KEY_LEFT = 37;
 var KEY_RIGHT = 39;
 var KEY_SPACE = 32;
 
+KEYCODES = {
+    LEFT: 37,
+    RIGHT: 39
+}
+
 Game.prototype.touchmove = function(currentX) {
     if (previousX > 0){
         if (currentX > previousX){
@@ -266,7 +271,7 @@ WelcomeState.prototype.draw = function(game, dt, ctx) {
     ctx.fillText("Space Invaders", game.width / 2, game.height/2 - 40); 
     ctx.font="16px Arial";
 
-    ctx.fillText("Press 'Space' to start.", game.width / 2, game.height/2); 
+    ctx.fillText("Press 'Space' or touch to start.", game.width / 2, game.height/2); 
 };
 
 WelcomeState.prototype.keyDown = function(game, keyCode) {
